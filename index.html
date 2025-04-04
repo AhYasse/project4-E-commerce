@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+   
+    <title>Shopping Home</title>
+</head>
+<body>
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="images/accessories/E__1_-removebg-preview.png" alt="logo" height="80">
+                </a>
+                        <div class="d-flex">
+                            <button class="btn btn-outline-primary me-2" onclick="redirectTo('login.html')">
+                                Login
+                            </button>
+                            <button class="btn btn-outline-success" onclick="redirectTo('register.html')">
+                                Register
+                            </button>
+                        </div>
+            </div>
+        </nav>
+        <!-- Search Section -->
+     <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <select name="search" id="searchType" class="form-control">
+                    <option value="name">Search by Product Name</option>
+                    <option value="category">Search by Category</option>
+                </select>
+            </div>
+            <div class="col-md-7">
+                <input type="text" id="searchBox" class="form-control" placeholder="Search..." onkeyup="searchProducts()">
+            </div>
+            <div class="col-md-2">
+                <button class="search-btn btn btn-block bg-dark text-light" onclick="searchProducts()">Search</button>
+            </div>
+        </div>
+     </div>
+     <!-- Products Cards -->
+      <div class="container mt-5" id="products-container">
+        <div class="row" id="products-row">
+
+        </div>
+
+      </div>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

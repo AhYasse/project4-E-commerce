@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title"></title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+     <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/accessories/E__1_-removebg-preview.png" alt="logo" height="80">
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                <li class="nav-item dropdown" style="list-style: none;">
+                    <a href="#" class="nav-link" role="button" id="cartDropdown">
+                        <i class="fas fa-shopping-cart"></i><span id="cartCount">0</span>
+                    </a>
+                    <div id="cartDropdownMenu" class="dropdown-menu cart-dropdown">
+                        <div id="cartDropdownItems"></div>
+                        <div class="dropdown-divider"></div>
+                        <a href="cart.html" class="dropdown-item">View All Products</a>
+                    </div>
+                  </li>
+                <span id="usernameDisplay" class="mx-3"></span>
+              <button onclick="logout()" class="btn btn-outline-danger ms-3">Logout</button>
+            </div>        
+    </nav> 
+       <!-- Search Section -->
+       <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <select name="search" id="searchType" class="form-control">
+                    <option value="name">Search by Product Name</option>
+                    <option value="category">Search by Category</option>
+                </select>
+            </div>
+            <div class="col-md-7">
+                <input type="text" id="searchBox" class="form-control" placeholder="Search..." onkeyup="searchProducts()">
+            </div>
+            <div class="col-md-2">
+                <button class="search-btn btn btn-block bg-dark text-light" onclick="searchProducts()">Search</button>
+            </div>
+        </div>
+     </div>
+      <!-- Products Cards -->
+    <div class="container mt-5" id="products-container">
+        <div class="row" id="products-row"></div>
+    </div> 
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
