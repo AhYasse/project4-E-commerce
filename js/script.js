@@ -190,7 +190,7 @@ function saveCartAndFavorites() {
     const cart = products.filter(product => product.isInCart);
     const favorites = products.filter(product => product.isFavorite);
     localStorage.setItem('cart', JSON.stringify(cart));
-    localStorage.setItem('favorties', JSON.stringify(favorites));
+    localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
 function loadCartAndFavorites() {
@@ -204,7 +204,7 @@ function loadCartAndFavorites() {
         product.quantity = cartProduct.quantity;
     } else {
         product.isInCart = false;
-        product.quantity = 0
+        product.quantity = 0;
     }
     product.isFavorite = !!favoriteProduct;
    });
